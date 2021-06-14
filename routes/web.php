@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HttpClientController;
+use App\Http\Controllers\FluentStringController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,4 @@ Route::get('http-client/get-post-by-id/{id}', [HttpClientController::class, 'get
 Route::get('http-client/add-post', [HttpClientController::class, 'addPost'])->name('http-client.add-post');
 Route::get('http-client/update-post', [HttpClientController::class, 'updatePost'])->name('http-client.update-post');
 Route::get('http-client/delete-post/{id}', [HttpClientController::class, 'deletePost'])->name('http-client.delete-post');
+Route::get('fluent-string/example1', [FluentStringController::class, 'example1'])->name('fluent-string.example1');

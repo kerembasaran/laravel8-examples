@@ -13,5 +13,13 @@
             <a class="dropdown-item" href="{{ route('http-client.delete-post',12) }}">Veri Silme</a>
         </div>
     </div>
+    <div class="dropdown dropright list-group-item list-group-item-action">
+        <div class="stretched-link" id="dropdownFluentString" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Fluent Strings >
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownFluentString">
+            <a class="dropdown-item" href="{{ route('fluent-string.example1') }}">Example 1</a>
+        </div>
+    </div>
 </div>
 
