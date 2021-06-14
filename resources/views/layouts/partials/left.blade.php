@@ -21,5 +21,6 @@
             <a class="dropdown-item" href="{{ route('fluent-string.example1') }}">Example 1</a>
         </div>
     </div>
+    <a href="{{ route('http-requests.example1') }}" class="list-group-item list-group-item-action">Http Requests</a>
 </div>
 

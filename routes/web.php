@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HttpClientController;
 use App\Http\Controllers\FluentStringController;
+use App\Http\Controllers\HttpRequestsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,4 @@ Route::get('http-client/add-post', [HttpClientController::class, 'addPost'])->na
 Route::get('http-client/update-post', [HttpClientController::class, 'updatePost'])->name('http-client.update-post');
 Route::get('http-client/delete-post/{id}', [HttpClientController::class, 'deletePost'])->name('http-client.delete-post');
 Route::get('fluent-string/example1', [FluentStringController::class, 'example1'])->name('fluent-string.example1');
+Route::get('http-requests/example1', [HttpRequestsController::class, 'example1'])->name('http-requests.example1');
