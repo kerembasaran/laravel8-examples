@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HttpClientController;
 use App\Http\Controllers\FluentStringController;
 use App\Http\Controllers\HttpRequestsController;
+use App\Http\Controllers\FormValidationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,15 @@ Route::get('http-client/update-post', [HttpClientController::class, 'updatePost'
 Route::get('http-client/delete-post/{id}', [HttpClientController::class, 'deletePost'])->name('http-client.delete-post');
 Route::get('fluent-string/example1', [FluentStringController::class, 'example1'])->name('fluent-string.example1');
 Route::get('http-requests/example1', [HttpRequestsController::class, 'example1'])->name('http-requests.example1');
+
+Route::view('form-validation/example1', 'form-validation.example1')->name('form-validation.example1');
+Route::post('form-validation/example1', [FormValidationController::class, 'formValidation']);
+
+Route::view('form-validation/example2', 'form-validation.example2')->name('form-validation.example2');
+Route::post('form-validation/example2', [FormValidationController::class, 'formValidation']);
+
+Route::view('form-validation/example3', 'form-validation.example3')->name('form-validation.example3');
+Route::post('form-validation/example3', [FormValidationController::class, 'formValidation']);
+
+Route::view('form-validation/example4', 'form-validation.example4')->name('form-validation.example4');
+Route::post('form-validation/example4', [FormValidationController::class, 'formValidation']);

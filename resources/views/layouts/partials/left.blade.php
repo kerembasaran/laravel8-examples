@@ -22,5 +22,16 @@
         </div>
     </div>
     <a href="{{ route('http-requests.example1') }}" class="list-group-item list-group-item-action">Http Requests</a>
+    <div class="dropdown dropright list-group-item list-group-item-action">
+        <div class="stretched-link" id="dropdownFormValidationRequest" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Form Validation Request >
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownFormValidationRequest">
+            <a class="dropdown-item" href="{{ route('form-validation.example1') }}">Example 1</a>
+            <a class="dropdown-item" href="{{ route('form-validation.example2') }}">Example 2</a>
+            <a class="dropdown-item" href="{{ route('form-validation.example3') }}">Example 3</a>
+            <a class="dropdown-item" href="{{ route('form-validation.example4') }}">Example 4</a>
+        </div>
+    </div>
 </div>
 
