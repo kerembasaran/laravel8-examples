@@ -5,6 +5,7 @@ use App\Http\Controllers\HttpClientController;
 use App\Http\Controllers\FluentStringController;
 use App\Http\Controllers\HttpRequestsController;
 use App\Http\Controllers\FormValidationController;
+use App\Http\Controllers\HttpSessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,7 @@ Route::post('form-validation/example3', [FormValidationController::class, 'formV
 
 Route::view('form-validation/example4', 'form-validation.example4')->name('form-validation.example4');
 Route::post('form-validation/example4', [FormValidationController::class, 'formValidation']);
+
+Route::get('get-session-data', [HttpSessionController::class, 'getSessionData'])->name('get.session.data');
+Route::get('store-session-data', [HttpSessionController::class, 'storeSessionData'])->name('store.session.data');
+Route::get('delete-session-data', [HttpSessionController::class, 'deleteSessionData'])->name('delete.session.data');

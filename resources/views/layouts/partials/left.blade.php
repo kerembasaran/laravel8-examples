@@ -33,5 +33,15 @@
             <a class="dropdown-item" href="{{ route('form-validation.example4') }}">Example 4</a>
         </div>
     </div>
+    <div class="dropdown dropright list-group-item list-group-item-action">
+        <div class="stretched-link" id="dropdownSession" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Http Session >
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownSession">
+            <a class="dropdown-item" href="{{ route('get.session.data') }}">Session Listeleme</a>
+            <a class="dropdown-item" href="{{ route('store.session.data') }}">Session Oluşturma</a>
+            <a class="dropdown-item" href="{{ route('delete.session.data') }}">Session Silme</a>
+        </div>
+    </div>
 </div>
 
