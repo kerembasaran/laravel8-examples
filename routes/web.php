@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 Route::view('/', 'home')->name('home');
+Route::view('route/index', 'route.index')->name('route.index');
