@@ -72,5 +72,14 @@
             <a class="dropdown-item" href="{{ route('students') }}">Öğrenciler</a>
         </div>
     </div>
+    <div class="dropdown dropright list-group-item list-group-item-action">
+        <div class="stretched-link" id="dropdownEloquentOneToOne" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Eloquent One To One >
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownEloquentOneToOne">
+            <a class="dropdown-item" href="{{ route('one-to-one.insert-record') }}">Add User Phone</a>
+            <a class="dropdown-item" href="{{ route('one-to-one.fetch-phone-by-user',4) }}">Userın Telefonu</a>
+        </div>
+    </div>
 </div>
 

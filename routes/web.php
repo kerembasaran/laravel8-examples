@@ -10,6 +10,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\JoinController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\OneToOneController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,3 +77,6 @@ Route::get('database-eloquent-detail/post/{id}', [PostController::class, 'getPos
 Route::get('database-eloquent-delete/post/{id}', [PostController::class, 'deletePostEloquent'])->name('database-eloquent-delete.post');
 Route::get('database-eloquent-update/post/{id}', [PostController::class, 'editPostEloquent'])->name('database-eloquent-update.post');
 Route::post('database-eloquent-update/post-from-submit', [PostController::class, 'updatePostEloquent'])->name('database-eloquent-update.post-from-submit');
+
+Route::get('one-to-one/insert-record', [OneToOneController::class, 'insertRecord'])->name('one-to-one.insert-record');
+Route::get('one-to-one/fetch-phone-by-user/{id}', [OneToOneController::class, 'fetchPhoneByUser'])->name('one-to-one.fetch-phone-by-user');
