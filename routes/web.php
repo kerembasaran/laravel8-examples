@@ -52,3 +52,4 @@ Route::get('database-raw-query-list/posts', [PostController::class, 'getAllPost'
 Route::view('database-raw-query-save/post', 'database.raw-query.save.post')->name('database-raw-query-save.post');
 Route::post('database-raw-query-save/post', [PostController::class, 'addPostSubmit']);
 Route::get('database-raw-query-detail/post/{id}', [PostController::class, 'getPostById'])->name('database-raw-query-detail.post');
+Route::get('database-query-builder-delete/post/{id}', [PostController::class, 'deletePost'])->name('database-query-builder-delete.post');

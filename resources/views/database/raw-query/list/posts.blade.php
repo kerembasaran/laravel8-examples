@@ -7,6 +7,11 @@
 
 @endsection
 @section('content')
+    @if(Session::has('post_deleted'))
+        <div class="alert alert-danger">
+            {{ Session::get('post_deleted') }}
+        </div>
+    @endif
     <div class="card">
         <div class="card-header">
             <div class="row">
@@ -36,6 +41,7 @@
                         <td>{{ $post->body }}</td>
                         <td>
                             <a href="{{ route('database-raw-query-detail.post',$post->id) }}" class="btn btn-success">Detail</a>
+                            <a href="{{ route('database-query-builder-delete.post',$post->id) }}" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 @endforeach
