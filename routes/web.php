@@ -8,6 +8,7 @@ use App\Http\Controllers\FormValidationController;
 use App\Http\Controllers\HttpSessionController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\JoinController;
+use App\Http\Controllers\FileUploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,3 +63,6 @@ Route::get('left-join', [JoinController::class, 'leftJoinClause'])->name('leftjo
 Route::get('right-join', [JoinController::class, 'rightJoinClause'])->name('rightjoin');
 
 Route::get('get-all-posts-using-model', [PostController::class, 'getAllPostsUsingModel'])->name('get.all.posts.using.model');
+
+Route::view('file-upload/example1', 'file-upload.example1')->name('file-upload.example1');
+Route::post('file-upload/example1', [FileUploadController::class, 'example1']);

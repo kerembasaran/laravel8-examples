@@ -62,5 +62,6 @@
         </div>
     </div>
     <a href="{{ route('get.all.posts.using.model') }}" class="list-group-item list-group-item-action">Get All Posts Using Model</a>
+    <a href="{{ route('file-upload.example1') }}" class="list-group-item list-group-item-action">File Upload</a>
 </div>
 
