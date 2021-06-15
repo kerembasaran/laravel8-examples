@@ -60,3 +60,5 @@ Route::post('database-query-builder-update/post-from-submit', [PostController::c
 Route::get('inner-join', [JoinController::class, 'innerJoinClause'])->name('innerjoin');
 Route::get('left-join', [JoinController::class, 'leftJoinClause'])->name('leftjoin');
 Route::get('right-join', [JoinController::class, 'rightJoinClause'])->name('rightjoin');
+
+Route::get('get-all-posts-using-model', [PostController::class, 'getAllPostsUsingModel'])->name('get.all.posts.using.model');

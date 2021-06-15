@@ -61,5 +61,6 @@
             <a class="dropdown-item" href="{{ route('rightjoin') }}">Right Join</a>
         </div>
     </div>
+    <a href="{{ route('get.all.posts.using.model') }}" class="list-group-item list-group-item-action">Get All Posts Using Model</a>
 </div>
 
