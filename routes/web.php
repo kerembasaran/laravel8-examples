@@ -53,3 +53,5 @@ Route::view('database-query-builder-save/post', 'database.query-builder.save.pos
 Route::post('database-query-builder-save/post', [PostController::class, 'addPostSubmit']);
 Route::get('database-query-builder-detail/post/{id}', [PostController::class, 'getPostById'])->name('database-query-builder-detail.post');
 Route::get('database-query-builder-delete/post/{id}', [PostController::class, 'deletePost'])->name('database-query-builder-delete.post');
+Route::get('database-query-builder-update/post/{id}', [PostController::class, 'editPost'])->name('database-query-builder-update.post');
+Route::post('database-query-builder-update/post-from-submit', [PostController::class, 'updatePost'])->name('database-query-builder-update.post-from-submit');

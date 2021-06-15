@@ -41,6 +41,7 @@
                         <td>{{ $post->body }}</td>
                         <td>
                             <a href="{{ route('database-query-builder-detail.post',$post->id) }}" class="btn btn-success">Detail</a>
+                            <a href="{{ route('database-query-builder-update.post',$post->id) }}" class="btn btn-info">Edit</a>
                             <a href="{{ route('database-query-builder-delete.post',$post->id) }}" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
