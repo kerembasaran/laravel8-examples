@@ -51,3 +51,4 @@ Route::get('delete-session-data', [HttpSessionController::class, 'deleteSessionD
 Route::get('database-raw-query-list/posts', [PostController::class, 'getAllPost'])->name('database-raw-query-list.posts');
 Route::view('database-raw-query-save/post', 'database.raw-query.save.post')->name('database-raw-query-save.post');
 Route::post('database-raw-query-save/post', [PostController::class, 'addPostSubmit']);
+Route::get('database-raw-query-detail/post/{id}', [PostController::class, 'getPostById'])->name('database-raw-query-detail.post');
