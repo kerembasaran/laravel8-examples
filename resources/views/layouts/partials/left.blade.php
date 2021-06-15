@@ -63,5 +63,13 @@
     </div>
     <a href="{{ route('get.all.posts.using.model') }}" class="list-group-item list-group-item-action">Get All Posts Using Model</a>
     <a href="{{ route('file-upload.example1') }}" class="list-group-item list-group-item-action">File Upload</a>
+    <div class="dropdown dropright list-group-item list-group-item-action">
+        <div class="stretched-link" id="dropdownEloquent" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Eloquent >
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownEloquent">
+            <a class="dropdown-item" href="{{ route('students') }}">Öğrenciler</a>
+        </div>
+    </div>
 </div>
 

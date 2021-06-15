@@ -9,6 +9,7 @@ use App\Http\Controllers\HttpSessionController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\JoinController;
 use App\Http\Controllers\FileUploadController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,3 +67,5 @@ Route::get('get-all-posts-using-model', [PostController::class, 'getAllPostsUsin
 
 Route::view('file-upload/example1', 'file-upload.example1')->name('file-upload.example1');
 Route::post('file-upload/example1', [FileUploadController::class, 'example1']);
+
+Route::get('students', [StudentController::class, 'fetchStudents'])->name('students');
