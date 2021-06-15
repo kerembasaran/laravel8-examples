@@ -9,7 +9,14 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            All Posts
+            <div class="row">
+                <div class="col-6 text-left">
+                    All Posts
+                </div>
+                <div class="col-6 text-right">
+                    <a href="{{ route('database-raw-query-save.post') }}" class="btn btn-primary">Add Post</a>
+                </div>
+            </div>
         </div>
         <div class="card-body">
             <table class="table">

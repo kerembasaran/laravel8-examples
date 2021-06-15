@@ -12,4 +12,13 @@ class PostController extends Controller
         $posts = DB::table('posts')->get();
         return view('database.raw-query.list.posts', compact('posts'));
     }
+
+    public function addPostSubmit(Request $request)
+    {
+        DB::table('posts')->insert([
+            'title' => $request->title,
+            'body' => $request->body
+        ]);
+        return back()->with('post_created', 'Post has been created successfully!');
+    }
 }
