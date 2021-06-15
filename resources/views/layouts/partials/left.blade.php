@@ -49,6 +49,7 @@
         </div>
         <div class="dropdown-menu" aria-labelledby="dropdownDatabase">
             <a class="dropdown-item" href="{{ route('database-query-builder-list.posts') }}">Query Builder</a>
+            <a class="dropdown-item" href="{{ route('database-eloquent-list.posts') }}">Eloquent</a>
         </div>
     </div>
     <div class="dropdown dropright list-group-item list-group-item-action">

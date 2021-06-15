@@ -69,3 +69,10 @@ Route::view('file-upload/example1', 'file-upload.example1')->name('file-upload.e
 Route::post('file-upload/example1', [FileUploadController::class, 'example1']);
 
 Route::get('students', [StudentController::class, 'fetchStudents'])->name('students');
+Route::get('database-eloquent-list/posts', [PostController::class, 'getAllPostEloquent'])->name('database-eloquent-list.posts');
+Route::view('database-eloquent-save/post', 'database.eloquent.save.post')->name('database-eloquent-save.post');
+Route::post('database-eloquent-save/post', [PostController::class, 'addPostSubmitEloquent']);
+Route::get('database-eloquent-detail/post/{id}', [PostController::class, 'getPostByIdEloquent'])->name('database-eloquent-detail.post');
+Route::get('database-eloquent-delete/post/{id}', [PostController::class, 'deletePostEloquent'])->name('database-eloquent-delete.post');
+Route::get('database-eloquent-update/post/{id}', [PostController::class, 'editPostEloquent'])->name('database-eloquent-update.post');
+Route::post('database-eloquent-update/post-from-submit', [PostController::class, 'updatePostEloquent'])->name('database-eloquent-update.post-from-submit');

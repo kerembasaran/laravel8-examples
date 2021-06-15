@@ -55,4 +55,46 @@ class PostController extends Controller
         $posts = Post::all();
         return $posts;
     }
+
+    public function getAllPostEloquent()
+    {
+        $posts = Post::orderBy('id', 'DESC')->get();
+        return view('database.eloquent.list.posts', compact('posts'));
+    }
+
+    public function addPostSubmitEloquent(Request $request)
+    {
+        $post = new Post();
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->save();
+        return back()->with('post_created', 'Post has been created successfully!');
+    }
+
+    public function getPostByIdEloquent($id)
+    {
+        $post = Post::where('id', $id)->first();
+        return view('database.eloquent.detail.post', compact('post'));
+    }
+
+    public function deletePostEloquent($id)
+    {
+        Post::where('id', $id)->delete();
+        return back()->with('post_deleted', 'Post has been deleted successfully!');
+    }
+
+    public function editPostEloquent($id)
+    {
+        $post = Post::find($id);
+        return view('database.eloquent.update.post', compact('post'));
+    }
+
+    public function updatePostEloquent(Request $request)
+    {
+        $post = Post::find($request->id);
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->save();
+        return back()->with('post_updated', 'Post has been updated successfully!');
+    }
 }
