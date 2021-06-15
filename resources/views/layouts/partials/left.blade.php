@@ -48,7 +48,7 @@
             Database >
         </div>
         <div class="dropdown-menu" aria-labelledby="dropdownDatabase">
-            <a class="dropdown-item" href="{{ route('database-raw-query-list.posts') }}">Raw Query</a>
+            <a class="dropdown-item" href="{{ route('database-query-builder-list.posts') }}">Query Builder</a>
         </div>
     </div>
 </div>

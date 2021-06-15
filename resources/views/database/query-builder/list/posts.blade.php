@@ -19,7 +19,7 @@
                     All Posts
                 </div>
                 <div class="col-6 text-right">
-                    <a href="{{ route('database-raw-query-save.post') }}" class="btn btn-primary">Add Post</a>
+                    <a href="{{ route('database-query-builder-save.post') }}" class="btn btn-primary">Add Post</a>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
                         <td>{{ $post->title }}</td>
                         <td>{{ $post->body }}</td>
                         <td>
-                            <a href="{{ route('database-raw-query-detail.post',$post->id) }}" class="btn btn-success">Detail</a>
+                            <a href="{{ route('database-query-builder-detail.post',$post->id) }}" class="btn btn-success">Detail</a>
                             <a href="{{ route('database-query-builder-delete.post',$post->id) }}" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>

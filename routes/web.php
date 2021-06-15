@@ -48,8 +48,8 @@ Route::get('get-session-data', [HttpSessionController::class, 'getSessionData'])
 Route::get('store-session-data', [HttpSessionController::class, 'storeSessionData'])->name('store.session.data');
 Route::get('delete-session-data', [HttpSessionController::class, 'deleteSessionData'])->name('delete.session.data');
 
-Route::get('database-raw-query-list/posts', [PostController::class, 'getAllPost'])->name('database-raw-query-list.posts');
-Route::view('database-raw-query-save/post', 'database.raw-query.save.post')->name('database-raw-query-save.post');
-Route::post('database-raw-query-save/post', [PostController::class, 'addPostSubmit']);
-Route::get('database-raw-query-detail/post/{id}', [PostController::class, 'getPostById'])->name('database-raw-query-detail.post');
+Route::get('database-query-builder-list/posts', [PostController::class, 'getAllPost'])->name('database-query-builder-list.posts');
+Route::view('database-query-builder-save/post', 'database.query-builder.save.post')->name('database-query-builder-save.post');
+Route::post('database-query-builder-save/post', [PostController::class, 'addPostSubmit']);
+Route::get('database-query-builder-detail/post/{id}', [PostController::class, 'getPostById'])->name('database-query-builder-detail.post');
 Route::get('database-query-builder-delete/post/{id}', [PostController::class, 'deletePost'])->name('database-query-builder-delete.post');

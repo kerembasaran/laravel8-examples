@@ -10,7 +10,7 @@ class PostController extends Controller
     public function getAllPost()
     {
         $posts = DB::table('posts')->get();
-        return view('database.raw-query.list.posts', compact('posts'));
+        return view('database.query-builder.list.posts', compact('posts'));
     }
 
     public function addPostSubmit(Request $request)
@@ -25,7 +25,7 @@ class PostController extends Controller
     public function getPostById($id)
     {
         $post = DB::table('posts')->where('id', $id)->first();
-        return view('database.raw-query.detail.post', compact('post'));
+        return view('database.query-builder.detail.post', compact('post'));
     }
 
     public function deletePost($id)
