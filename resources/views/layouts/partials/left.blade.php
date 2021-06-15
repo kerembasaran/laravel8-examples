@@ -43,5 +43,13 @@
             <a class="dropdown-item" href="{{ route('delete.session.data') }}">Session Silme</a>
         </div>
     </div>
+    <div class="dropdown dropright list-group-item list-group-item-action">
+        <div class="stretched-link" id="dropdownDatabase" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Database >
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownDatabase">
+            <a class="dropdown-item" href="{{ route('database-raw-query-list.posts') }}">Raw Query</a>
+        </div>
+    </div>
 </div>
 
