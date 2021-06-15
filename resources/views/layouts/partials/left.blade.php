@@ -51,5 +51,15 @@
             <a class="dropdown-item" href="{{ route('database-query-builder-list.posts') }}">Query Builder</a>
         </div>
     </div>
+    <div class="dropdown dropright list-group-item list-group-item-action">
+        <div class="stretched-link" id="dropdownjoins" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Joins >
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownjoins">
+            <a class="dropdown-item" href="{{ route('innerjoin') }}">İnner Join</a>
+            <a class="dropdown-item" href="{{ route('leftjoin') }}">Left Join</a>
+            <a class="dropdown-item" href="{{ route('rightjoin') }}">Right Join</a>
+        </div>
+    </div>
 </div>
 

@@ -7,6 +7,7 @@ use App\Http\Controllers\HttpRequestsController;
 use App\Http\Controllers\FormValidationController;
 use App\Http\Controllers\HttpSessionController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\JoinController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,3 +56,7 @@ Route::get('database-query-builder-detail/post/{id}', [PostController::class, 'g
 Route::get('database-query-builder-delete/post/{id}', [PostController::class, 'deletePost'])->name('database-query-builder-delete.post');
 Route::get('database-query-builder-update/post/{id}', [PostController::class, 'editPost'])->name('database-query-builder-update.post');
 Route::post('database-query-builder-update/post-from-submit', [PostController::class, 'updatePost'])->name('database-query-builder-update.post-from-submit');
+
+Route::get('inner-join', [JoinController::class, 'innerJoinClause'])->name('innerjoin');
+Route::get('left-join', [JoinController::class, 'leftJoinClause'])->name('leftjoin');
+Route::get('right-join', [JoinController::class, 'rightJoinClause'])->name('rightjoin');
