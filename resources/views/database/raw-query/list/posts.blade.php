@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Post
+    Posts
 @endsection
 @section('css')
 
