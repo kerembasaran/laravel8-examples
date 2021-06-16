@@ -11,6 +11,7 @@ use App\Http\Controllers\JoinController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\OneToOneController;
+use App\Http\Controllers\OneToManyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,3 +81,7 @@ Route::post('database-eloquent-update/post-from-submit', [PostController::class,
 
 Route::get('one-to-one/insert-record', [OneToOneController::class, 'insertRecord'])->name('one-to-one.insert-record');
 Route::get('one-to-one/fetch-phone-by-user/{id}', [OneToOneController::class, 'fetchPhoneByUser'])->name('one-to-one.fetch-phone-by-user');
+
+Route::get('one-to-many/add-post', [OneToManyController::class, 'addPost'])->name('one-to-many.add-post');
+Route::get('one-to-many/add-comment/{id}', [OneToManyController::class, 'addComment'])->name('one-to-many.add-comment');
+Route::get('one-to-many/get-comment-by-post/{id}', [OneToManyController::class, 'getCommentByPost'])->name('one-to-many.get-comment-by-post');

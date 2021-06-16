@@ -81,5 +81,15 @@
             <a class="dropdown-item" href="{{ route('one-to-one.fetch-phone-by-user',4) }}">Userın Telefonu</a>
         </div>
     </div>
+    <div class="dropdown dropright list-group-item list-group-item-action">
+        <div class="stretched-link" id="dropdownEloquentOneToMany" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Eloquent One To Many >
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownEloquentOneToMany">
+            <a class="dropdown-item" href="{{ route('one-to-many.add-post') }}">Add Post</a>
+            <a class="dropdown-item" href="{{ route('one-to-many.add-comment',208) }}">Posta Yorum Ekle</a>
+            <a class="dropdown-item" href="{{ route('one-to-many.get-comment-by-post',208) }}">Posta Ait Yorumlar</a>
+        </div>
+    </div>
 </div>
 
