@@ -104,5 +104,6 @@
         </div>
     </div>
     <a href="{{ route('flash-session.example1') }}" class="list-group-item list-group-item-action">Flash Session</a>
+    <a href="{{ route('localization.example1') }}" class="list-group-item list-group-item-action">Localization</a>
 </div>
 

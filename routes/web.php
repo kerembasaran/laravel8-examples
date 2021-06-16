@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HttpClientController;
 use App\Http\Controllers\FluentStringController;
@@ -96,3 +97,11 @@ Route::get('many-to-many/get-all-users-by-role/{id}', [RoleController::class, 'g
 
 Route::view('flash-session/example1', 'flash-session/example1')->name('flash-session.example1');
 Route::post('flash-session/example1', [FlashSessionController::class, 'example1']);
+
+Route::get('/localization/example1/{locale?}', function ($locale = 'en') {
+    if (!in_array($locale, ['en', 'tr', 'ko'])) {
+        abort(400);
+    }
+    App::setLocale($locale);
+    return view('localization.example1');
+})->name('localization.example1');
