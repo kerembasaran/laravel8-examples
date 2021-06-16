@@ -43,4 +43,10 @@ class HttpClientController extends Controller
         $response = Http::delete('https://jsonplaceholder.typicode.com/posts/' . $id);
         return $response->json();
     }
+
+    public function example1()
+    {
+        $response = Http::get('https://reqres.in/api/users?page=1');
+        return view('http-client.example1', ['response' => $response]);
+    }
 }

@@ -11,6 +11,7 @@
             <a class="dropdown-item" href="{{ route('http-client.add-post') }}">Veri Ekleme</a>
             <a class="dropdown-item" href="{{ route('http-client.update-post') }}">Veri Güncelleme</a>
             <a class="dropdown-item" href="{{ route('http-client.delete-post',12) }}">Veri Silme</a>
+            <a class="dropdown-item" href="{{ route('http-client.example1') }}">Example 1</a>
         </div>
     </div>
     <div class="dropdown dropright list-group-item list-group-item-action">
