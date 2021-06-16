@@ -103,5 +103,6 @@
             <a class="dropdown-item" href="{{ route('many-to-many.get-all-users-by-role',3) }}">Role Bağlı Userlar</a>
         </div>
     </div>
+    <a href="{{ route('flash-session.example1') }}" class="list-group-item list-group-item-action">Flash Session</a>
 </div>
 

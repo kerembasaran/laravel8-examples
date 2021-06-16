@@ -13,6 +13,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\OneToOneController;
 use App\Http\Controllers\OneToManyController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\FlashSessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,3 +93,6 @@ Route::get('many-to-many/add-role', [RoleController::class, 'addRole'])->name('m
 Route::get('many-to-many/add-user', [RoleController::class, 'addUser'])->name('many-to-many.add-user');
 Route::get('many-to-many/get-all-roles-by-user/{id}', [RoleController::class, 'getAllRolesByUser'])->name('many-to-many.get-all-roles-by-user');
 Route::get('many-to-many/get-all-users-by-role/{id}', [RoleController::class, 'getAllUsersByRole'])->name('many-to-many.get-all-users-by-role');
+
+Route::view('flash-session/example1', 'flash-session/example1')->name('flash-session.example1');
+Route::post('flash-session/example1', [FlashSessionController::class, 'example1']);
