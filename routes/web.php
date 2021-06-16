@@ -12,6 +12,7 @@ use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\OneToOneController;
 use App\Http\Controllers\OneToManyController;
+use App\Http\Controllers\RoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,3 +86,8 @@ Route::get('one-to-one/fetch-phone-by-user/{id}', [OneToOneController::class, 'f
 Route::get('one-to-many/add-post', [OneToManyController::class, 'addPost'])->name('one-to-many.add-post');
 Route::get('one-to-many/add-comment/{id}', [OneToManyController::class, 'addComment'])->name('one-to-many.add-comment');
 Route::get('one-to-many/get-comment-by-post/{id}', [OneToManyController::class, 'getCommentByPost'])->name('one-to-many.get-comment-by-post');
+
+Route::get('many-to-many/add-role', [RoleController::class, 'addRole'])->name('many-to-many.add-role');
+Route::get('many-to-many/add-user', [RoleController::class, 'addUser'])->name('many-to-many.add-user');
+Route::get('many-to-many/get-all-roles-by-user/{id}', [RoleController::class, 'getAllRolesByUser'])->name('many-to-many.get-all-roles-by-user');
+Route::get('many-to-many/get-all-users-by-role/{id}', [RoleController::class, 'getAllUsersByRole'])->name('many-to-many.get-all-users-by-role');

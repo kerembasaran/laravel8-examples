@@ -91,5 +91,16 @@
             <a class="dropdown-item" href="{{ route('one-to-many.get-comment-by-post',208) }}">Posta Ait Yorumlar</a>
         </div>
     </div>
+    <div class="dropdown dropright list-group-item list-group-item-action">
+        <div class="stretched-link" id="dropdownEloquentManyToMany" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Eloquent Many To Many >
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownEloquentManyToMany">
+            <a class="dropdown-item" href="{{ route('many-to-many.add-role') }}">Add Role</a>
+            <a class="dropdown-item" href="{{ route('many-to-many.add-user') }}">Add User</a>
+            <a class="dropdown-item" href="{{ route('many-to-many.get-all-roles-by-user',5) }}">Usera Bağlı Roller</a>
+            <a class="dropdown-item" href="{{ route('many-to-many.get-all-users-by-role',3) }}">Role Bağlı Userlar</a>
+        </div>
+    </div>
 </div>
 
