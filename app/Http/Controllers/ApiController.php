@@ -57,4 +57,9 @@ class ApiController extends Controller
             return ['Result' => 'delete operation is failed'];
         }
     }
+
+    public function searchApiExample1($name)
+    {
+        return Device::where('name', 'like', '%' . $name . '%')->get();
+    }
 }
