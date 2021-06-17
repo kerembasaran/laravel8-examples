@@ -23,7 +23,7 @@
 </div>
 
 <!-- jQuery and Bootstrap Bundle (includes Popper) -->
-<script src="{{ asset('assets/jquery-3.5.1/jquery-3.5.1.slim.min.js') }}"></script>
+<script src="{{ asset('assets/jquery-3.5.1/jquery-3.5.1.min.js') }}"></script>
 <script src="{{ asset('assets/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js') }}"></script>
 @yield('js')
 </body>

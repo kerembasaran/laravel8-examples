@@ -18,6 +18,7 @@ use App\Http\Controllers\FlashSessionController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\MultipleDatabaseConnectionController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -118,3 +119,6 @@ Route::get('mutator/add-member', [MemberController::class, 'addMemberMutator'])-
 Route::get('route-model-binding/{key:name}', [DeviceController::class, 'routeModelBindingExample1'])->name('route.model.binding');
 
 Route::get('multiple-database-connection', [MultipleDatabaseConnectionController::class, 'index'])->name('multiple.database.connection');
+
+Route::get('using-ajax/employees', [EmployeeController::class, 'index'])->name('employees.index');
+Route::post('using-ajax/add-employee', [EmployeeController::class, 'addEmployee'])->name('employees.add');
