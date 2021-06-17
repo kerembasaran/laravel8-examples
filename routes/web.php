@@ -108,3 +108,6 @@ Route::get('/localization/example1/{locale?}', function ($locale = 'en') {
 })->name('localization.example1');
 
 Route::get('accessors/index', [MemberController::class, 'index'])->name('accessors.index');
+
+Route::get('mutator/index', [MemberController::class, 'index'])->name('mutator.index');
+Route::get('mutator/add-member', [MemberController::class, 'addMemberMutator'])->name('mutator.add-member');

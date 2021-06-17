@@ -4,8 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+
 /*
  * get ile başlayanlar veri listelerken ve gösterirken
+ * set ile başlayanlar veri eklerken ve güncellerken
  *
  * Not : her hangi bir sutuna get  ile veri ekledikten sonra güncelleme işleminde o veriyi veri tabanına kayıt ediyor ve listelemede o veri get ile eklendiği için iki kere yazmış oluyor ('BOLU' verisi gibi)
  */
@@ -34,5 +36,10 @@ class Member extends Model
     public function getSonradanEklendiAttribute($value)
     {
         return $value . 'BAŞARAN';
+    }
+
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = 'Mr. ' . $value;
     }
 }

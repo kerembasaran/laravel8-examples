@@ -11,4 +11,13 @@ class MemberController extends Controller
     {
         return Member::all();
     }
+
+    public function addMemberMutator()
+    {
+        $member = new Member();
+        $member->name = 'john';
+        $member->email = 'john@john.com';
+        $member->address = 'Delhi';
+        $member->save();
+    }
 }

@@ -113,5 +113,14 @@
             <a class="dropdown-item" href="{{ route('accessors.index') }}">Tüm Veriler</a>
         </div>
     </div>
+    <div class="dropdown dropright list-group-item list-group-item-action">
+        <div class="stretched-link" id="dropdownMutator" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Mutator >
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownMutator">
+            <a class="dropdown-item" href="{{ route('mutator.index') }}">Tüm Veriler</a>
+            <a class="dropdown-item" href="{{ route('mutator.add-member') }}">Veri Ekle</a>
+        </div>
+    </div>
 </div>
 
