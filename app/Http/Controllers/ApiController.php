@@ -19,4 +19,17 @@ class ApiController extends Controller
     {
         return Device::all();
     }
+
+    public function databaseSavePostMethodApiExample1(Request $request)
+    {
+        $device = new Device();
+        $device->name = $request->name;
+        $result = $device->save();
+
+        if ($result) {
+            return ['Result' => 'Data has been saved'];
+        } else {
+            return ['Result' => 'Operation failed'];
+        }
+    }
 }

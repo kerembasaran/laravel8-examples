@@ -24,3 +24,6 @@ Route::get('make-first-simplest-api', [ApiController::class, 'makeFirstSimplestA
 
 Route::get('get-data-api/example1', [ApiController::class, 'getDataApiExample1'])->name('get.data.api.example1');
 //Postman => http://laravel8examples.test/api/get-data-api/example1
+
+Route::post('database-save-post-method-api/example1', [ApiController::class, 'databaseSavePostMethodApiExample1']);
+//Postman => http://laravel8examples.test/api/database-save-post-method-api/example1
