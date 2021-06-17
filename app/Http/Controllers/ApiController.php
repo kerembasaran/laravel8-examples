@@ -85,4 +85,10 @@ class ApiController extends Controller
             }
         }
     }
+
+    public function fileUploadApiExample1(Request $request)
+    {
+        $result = $request->file('file')->store('apiDocs');
+        return ['result' => $request];
+    }
 }

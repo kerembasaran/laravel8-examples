@@ -39,3 +39,6 @@ Route::get('search-api/example1/{name}', [ApiController::class, 'searchApiExampl
 
 Route::post('database-save-form-validation-api/example1', [ApiController::class, 'databaseSaveFormValidationApiExample1']);
 //Postman => http://laravel8examples.test/api/database-save-form-validation-api/example1
+
+Route::post('file-upload-api/example1', [ApiController::class, 'fileUploadApiExample1']);
+//Postman => http://laravel8examples.test/api/file-upload-api/example1
