@@ -21,3 +21,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('make-first-simplest-api', [ApiController::class, 'makeFirstSimplestApi'])->name('make.first.simplest.api');
 //Postman => http://laravel8examples.test/api/make-first-simplest-api
+
+Route::get('get-data-api/example1', [ApiController::class, 'getDataApiExample1'])->name('get.data.api.example1');
+//Postman => http://laravel8examples.test/api/get-data-api/example1
