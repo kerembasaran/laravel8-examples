@@ -40,6 +40,7 @@ Route::get('http-client/update-post', [HttpClientController::class, 'updatePost'
 Route::get('http-client/delete-post/{id}', [HttpClientController::class, 'deletePost'])->name('http-client.delete-post');
 Route::get('http-client/example1', [HttpClientController::class, 'example1'])->name('http-client.example1');
 Route::get('fluent-string/example1', [FluentStringController::class, 'example1'])->name('fluent-string.example1');
+Route::get('fluent-string/example2', [FluentStringController::class, 'example2'])->name('fluent-string.example2');
 Route::get('http-requests/example1', [HttpRequestsController::class, 'example1'])->name('http-requests.example1');
 
 Route::view('form-validation/example1', 'form-validation.example1')->name('form-validation.example1');

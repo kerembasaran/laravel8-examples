@@ -20,6 +20,7 @@
         </div>
         <div class="dropdown-menu" aria-labelledby="dropdownFluentString">
             <a class="dropdown-item" href="{{ route('fluent-string.example1') }}">Example 1</a>
+            <a class="dropdown-item" href="{{ route('fluent-string.example2') }}">Example 2</a>
         </div>
     </div>
     <a href="{{ route('http-requests.example1') }}" class="list-group-item list-group-item-action">Http Requests</a>

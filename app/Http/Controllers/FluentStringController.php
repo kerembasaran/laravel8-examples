@@ -39,4 +39,27 @@ class FluentStringController extends Controller
         $str3 = Str::of('laravel 8')->upper();
         echo $str3;
     }
+
+    public function example2()
+    {
+        $data = "hi,let's learn laravel";
+        echo $data . '<br>';
+
+        $data = Str::ucfirst($data);
+        echo $data . '<br>';
+
+        $data = Str::replaceFirst('Hi', 'Hello', $data);
+        echo $data . '<br>';
+
+        $data = Str::camel($data);
+        echo $data . '<br>';
+
+        $data = "hi,let's learn laravel";
+
+        $data = Str::of($data)
+            ->ucfirst($data)
+            ->replaceFirst('Hi', 'Hello', $data)
+            ->camel($data);
+        echo $data . '<br>';
+    }
 }
