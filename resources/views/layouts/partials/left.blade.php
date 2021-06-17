@@ -124,5 +124,6 @@
         </div>
     </div>
     <a href="{{ route('route.model.binding','mobile') }}" class="list-group-item list-group-item-action"> Route Model Binding</a>
+    <a href="{{ route('multiple.database.connection') }}" class="list-group-item list-group-item-action">Multiple Database Connection</a>
 </div>
 

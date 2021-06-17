@@ -17,6 +17,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\FlashSessionController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\MultipleDatabaseConnectionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -115,3 +116,5 @@ Route::get('mutator/index', [MemberController::class, 'index'])->name('mutator.i
 Route::get('mutator/add-member', [MemberController::class, 'addMemberMutator'])->name('mutator.add-member');
 
 Route::get('route-model-binding/{key:name}', [DeviceController::class, 'routeModelBindingExample1'])->name('route.model.binding');
+
+Route::get('multiple-database-connection', [MultipleDatabaseConnectionController::class, 'index'])->name('multiple.database.connection');
