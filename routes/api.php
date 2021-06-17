@@ -36,3 +36,6 @@ Route::delete('database-delete-api/example1/{id}', [ApiController::class, 'datab
 
 Route::get('search-api/example1/{name}', [ApiController::class, 'searchApiExample1']);
 //Postman => http://laravel8examples.test/api/search-api/example1/b
+
+Route::post('database-save-form-validation-api/example1', [ApiController::class, 'databaseSaveFormValidationApiExample1']);
+//Postman => http://laravel8examples.test/api/database-save-form-validation-api/example1
