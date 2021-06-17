@@ -16,6 +16,7 @@ use App\Http\Controllers\OneToManyController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\FlashSessionController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\DeviceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -112,3 +113,5 @@ Route::get('accessors/index', [MemberController::class, 'index'])->name('accesso
 
 Route::get('mutator/index', [MemberController::class, 'index'])->name('mutator.index');
 Route::get('mutator/add-member', [MemberController::class, 'addMemberMutator'])->name('mutator.add-member');
+
+Route::get('route-model-binding/{key:name}', [DeviceController::class, 'routeModelBindingExample1'])->name('route.model.binding');

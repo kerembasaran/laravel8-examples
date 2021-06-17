@@ -123,5 +123,6 @@
             <a class="dropdown-item" href="{{ route('mutator.add-member') }}">Veri Ekle</a>
         </div>
     </div>
+    <a href="{{ route('route.model.binding','mobile') }}" class="list-group-item list-group-item-action"> Route Model Binding</a>
 </div>
 
