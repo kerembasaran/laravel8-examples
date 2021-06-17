@@ -15,6 +15,7 @@ use App\Http\Controllers\OneToOneController;
 use App\Http\Controllers\OneToManyController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\FlashSessionController;
+use App\Http\Controllers\MemberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -105,3 +106,5 @@ Route::get('/localization/example1/{locale?}', function ($locale = 'en') {
     App::setLocale($locale);
     return view('localization.example1');
 })->name('localization.example1');
+
+Route::get('accessors/index', [MemberController::class, 'index'])->name('accessors.index');

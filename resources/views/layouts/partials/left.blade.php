@@ -105,5 +105,13 @@
     </div>
     <a href="{{ route('flash-session.example1') }}" class="list-group-item list-group-item-action">Flash Session</a>
     <a href="{{ route('localization.example1') }}" class="list-group-item list-group-item-action">Localization</a>
+    <div class="dropdown dropright list-group-item list-group-item-action">
+        <div class="stretched-link" id="dropdownAccessors" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Accessors >
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownAccessors">
+            <a class="dropdown-item" href="{{ route('accessors.index') }}">Tüm Veriler</a>
+        </div>
+    </div>
 </div>
 
