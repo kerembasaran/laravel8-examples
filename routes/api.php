@@ -27,3 +27,6 @@ Route::get('get-data-api/example1', [ApiController::class, 'getDataApiExample1']
 
 Route::post('database-save-post-method-api/example1', [ApiController::class, 'databaseSavePostMethodApiExample1']);
 //Postman => http://laravel8examples.test/api/database-save-post-method-api/example1
+
+Route::put('database-update-put-method-api/example1', [ApiController::class, 'databaseUpdatePutMethodApiExample1']);
+//Postman => http://laravel8examples.test/api/database-update-put-method-api/example1

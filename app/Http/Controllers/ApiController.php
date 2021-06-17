@@ -32,4 +32,17 @@ class ApiController extends Controller
             return ['Result' => 'Operation failed'];
         }
     }
+
+    public function databaseUpdatePutMethodApiExample1(Request $request)
+    {
+        $device = Device::find($request->id);
+        $device->name = $request->name;
+        $result = $device->save();
+
+        if ($result) {
+            return ['Result' => 'Data has been update'];
+        } else {
+            return ['Result' => 'update operation has been failed'];
+        }
+    }
 }
