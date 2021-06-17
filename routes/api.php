@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('make-first-simplest-api', [ApiController::class, 'makeFirstSimplestApi'])->name('make.first.simplest.api');
+//Postman => http://laravel8examples.test/api/make-first-simplest-api
