@@ -30,3 +30,6 @@ Route::post('database-save-post-method-api/example1', [ApiController::class, 'da
 
 Route::put('database-update-put-method-api/example1', [ApiController::class, 'databaseUpdatePutMethodApiExample1']);
 //Postman => http://laravel8examples.test/api/database-update-put-method-api/example1
+
+Route::delete('database-delete-api/example1/{id}', [ApiController::class, 'databaseDeleteApiExample1']);
+//Postman => http://laravel8examples.test/api/database-delete-api/example1/9

@@ -45,4 +45,16 @@ class ApiController extends Controller
             return ['Result' => 'update operation has been failed'];
         }
     }
+
+    public function databaseDeleteApiExample1($id)
+    {
+        $device = Device::find($id);
+        $result = $device->delete();
+
+        if ($result) {
+            return ['Result' => 'record has been delete'];
+        } else {
+            return ['Result' => 'delete operation is failed'];
+        }
+    }
 }
