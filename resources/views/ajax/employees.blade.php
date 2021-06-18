@@ -40,6 +40,7 @@
                         <td>{{$employee->phone}}</td>
                         <td>
                             <a href="javascript:void(0)" onclick="editStudent({{$employee->id}})" class="btn btn-info">Edit</a>
+                            <a href="javascript:void(0)" onclick="deleteEmployee({{$employee->id}})" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 @endforeach
@@ -197,5 +198,21 @@
                 }
             });
         });
+    </script>
+    <script>
+        function deleteEmployee(id) {
+            if (confirm('Do you realy wat to delete this record?')) {
+                $.ajax({
+                    url: '/using-ajax/delete-employee/' + id,
+                    type: 'DELETE',
+                    data: {
+                        _token: $('input[name=_token]').val()
+                    },
+                    success: function (response) {
+                        $('#eid' + id).remove();
+                    }
+                });
+            }
+        }
     </script>
 @endsection

@@ -40,4 +40,11 @@ class EmployeeController extends Controller
         $employee->save();
         return response()->json($employee);
     }
+
+    public function deleteEmployee($id)
+    {
+        $employee = Employee::find($id);
+        $employee->delete();
+        return response()->json(['success' => 'Record has been deleted']);
+    }
 }
