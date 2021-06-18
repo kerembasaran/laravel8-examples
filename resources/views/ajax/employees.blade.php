@@ -17,6 +17,7 @@
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                         Add New Employee
                     </button>
+                    <a href="#" class="btn btn-danger" id="deleteAllSelectedRecord">Delete Selected</a>
                 </div>
             </div>
         </div>
@@ -24,6 +25,7 @@
             <table id="employeesTable" class="table">
                 <thead>
                 <tr>
+                    <th><input type="checkbox" id="chkCheckAll"></th>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email</th>
@@ -34,6 +36,9 @@
                 <tbody>
                 @foreach($employees as $employee)
                     <tr id="eid{{$employee->id}}">
+                        <td>
+                            <input type="checkbox" name="ide" class="checkBoxClass" value="{{$employee->id}}">
+                        </td>
                         <td>{{$employee->firstname}}</td>
                         <td>{{$employee->lastname}}</td>
                         <td>{{$employee->email}}</td>
@@ -214,5 +219,34 @@
                 });
             }
         }
+    </script>
+    <script>
+        $(function (e) {
+            $('#chkCheckAll').click(function () {
+                $('.checkBoxClass').prop('checked', $(this).prop('checked'));
+            });
+            $('#deleteAllSelectedRecord').click(function (e) {
+                e.preventDefault();
+                var allide = [];
+
+                $('input:checkbox[name=ide]:checked').each(function () {
+                    allide.push($(this).val());
+                });
+
+                $.ajax({
+                    url: '{{ route('employees.delete.selected') }}',
+                    type: 'DELETE',
+                    data: {
+                        _token: $('input[name=_token]').val(),
+                        ide: allide
+                    },
+                    success: function (response) {
+                        $.each(allide, function (key, val) {
+                            $('#eid' + val).remove();
+                        });
+                    }
+                });
+            });
+        });
     </script>
 @endsection

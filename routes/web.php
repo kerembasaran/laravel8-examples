@@ -125,3 +125,4 @@ Route::post('using-ajax/add-employee', [EmployeeController::class, 'addEmployee'
 Route::get('using-ajax/employee/{id}', [EmployeeController::class, 'getEmployeeById']);
 Route::put('using-ajax/update-employee', [EmployeeController::class, 'updateEmployee'])->name('employees.update');
 Route::delete('using-ajax/delete-employee/{id}', [EmployeeController::class, 'deleteEmployee']);
+Route::delete('using-ajax/delete-employee-selected', [EmployeeController::class, 'deleteCheckedEmployee'])->name('employees.delete.selected');;

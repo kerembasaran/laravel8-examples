@@ -47,4 +47,11 @@ class EmployeeController extends Controller
         $employee->delete();
         return response()->json(['success' => 'Record has been deleted']);
     }
+
+    public function deleteCheckedEmployee(Request $request)
+    {
+        $ide = $request->ide;
+        Employee::whereIn('id', $ide)->delete();
+        return response()->json(['success' => 'Employee have been deleted!']);
+    }
 }
