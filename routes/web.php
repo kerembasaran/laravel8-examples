@@ -122,3 +122,5 @@ Route::get('multiple-database-connection', [MultipleDatabaseConnectionController
 
 Route::get('using-ajax/employees', [EmployeeController::class, 'index'])->name('employees.index');
 Route::post('using-ajax/add-employee', [EmployeeController::class, 'addEmployee'])->name('employees.add');
+Route::get('using-ajax/employee/{id}', [EmployeeController::class, 'getEmployeeById']);
+Route::put('using-ajax/update-employee', [EmployeeController::class, 'updateEmployee'])->name('employees.update');

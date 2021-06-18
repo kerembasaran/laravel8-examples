@@ -23,4 +23,21 @@ class EmployeeController extends Controller
         $employee->save();
         return response()->json($employee);
     }
+
+    public function getEmployeeById($id)
+    {
+        $employee = Employee::find($id);
+        return response()->json($employee);
+    }
+
+    public function updateEmployee(Request $request)
+    {
+        $employee = Employee::find($request->id);
+        $employee->firstname = $request->firstname;
+        $employee->lastname = $request->lastname;
+        $employee->email = $request->email;
+        $employee->phone = $request->phone;
+        $employee->save();
+        return response()->json($employee);
+    }
 }
