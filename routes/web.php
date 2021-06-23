@@ -19,6 +19,7 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\MultipleDatabaseConnectionController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\HelperController;
 
 /*
 |--------------------------------------------------------------------------
@@ -126,3 +127,7 @@ Route::get('using-ajax/employee/{id}', [EmployeeController::class, 'getEmployeeB
 Route::put('using-ajax/update-employee', [EmployeeController::class, 'updateEmployee'])->name('employees.update');
 Route::delete('using-ajax/delete-employee/{id}', [EmployeeController::class, 'deleteEmployee']);
 Route::delete('using-ajax/delete-employee-selected', [EmployeeController::class, 'deleteCheckedEmployee'])->name('employees.delete.selected');;
+
+Route::get('helper/index', [HelperController::class, 'index'])->name('helper.index');
+Route::get('helper/account', [HelperController::class, 'account'])->name('helper.account');
+Route::get('helper/profile', [HelperController::class, 'profile'])->name('helper.profile');
