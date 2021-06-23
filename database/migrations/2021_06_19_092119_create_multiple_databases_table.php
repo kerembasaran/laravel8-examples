@@ -28,6 +28,6 @@ class CreateMultipleDatabasesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('multiple_databases');
+        Schema::connection('mysql2')->dropIfExists('multiple_databases');
     }
 }
